@@ -1,7 +1,7 @@
 Kelompok 1 SDGS 1
 Anggota Kelompok
 
-- Khamim
+- Khamim 
 - Chokito
-- Myl
+- Mylian
 - Rizqi
