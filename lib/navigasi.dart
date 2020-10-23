@@ -10,13 +10,17 @@ class halamanPertama extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
+        // Membuat Button
         child: ElevatedButton(
+          // Fungsi ketika button ditekan
           onPressed: () {
             Navigator.push(
               context,
+              // Mengubah context halamanPertama menjadi halamanKedua
               MaterialPageRoute(builder: (context) => halamanKedua()),
             );
           },
+          // Membuat anak berupa Widget Text
           child: Text('Tekan untuk ke halaman kedua'),
         ),
       ),
