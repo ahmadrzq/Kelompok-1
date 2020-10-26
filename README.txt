@@ -1,10 +1,10 @@
 Kelompok 1 SDGS 1
 Anggota Kelompok
 
-- Khamim 
-- Chokito
-- Mylian
-- Rizqi
+- KHAMIM THOHARI WAKHID - 182410102017
+- CHOKITO FARARICKI S. H. - 182410102042
+- MYLIAN GEDHE - 182410102048
+- AHMAD RIZQI ISNAIN - 182410102053
 
 Aplikasi Work.in
 
