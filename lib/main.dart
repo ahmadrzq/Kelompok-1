@@ -1,3 +1,4 @@
+import 'package:coba5/page2.dart';
 import 'package:flutter/material.dart';
 
 // Mengeksekusi void main dengan membuka MaterialApp
@@ -33,55 +34,20 @@ class Home extends StatelessWidget {
         backgroundColor: Colors.teal,
       ),
       // Membuat body, Column digunakan untuk membuat daftar kebawah
-      body: Column(
-        children: <Widget>[
-          // Membuat Container yang nanti diisi cells
-          Container(
-            // Memberi padding dengan sisi kiri 5 dan atas 10)
-            padding: EdgeInsets.fromLTRB(5, 10, 5, 0),
-            // Membuat Row yang digunakan untuk membuat daftar arah horizontal
-            child: Row(
-              // Membuat jarak antar cells
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              // Membuat anak :v
-              children: <Widget>[
-                // Ini nama anaknya :v
-                Text('Khamim Thohari Wakhid'),
-                Text('182410102017'),
-              ],
-            ),
-          ),
-          Container(
-            padding: EdgeInsets.fromLTRB(5, 10, 5, 0),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: <Widget>[
-                Text('Chokito Fararicki Sisi Haskar'),
-                Text('182410102042'),
-              ],
-            ),
-          ),
-          Container(
-            padding: EdgeInsets.fromLTRB(5, 10, 5, 0),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: <Widget>[
-                Text('Mylian Gedhe'),
-                Text('182410102048'),
-              ],
-            ),
-          ),
-          Container(
-            padding: EdgeInsets.fromLTRB(5, 10, 5, 0),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: <Widget>[
-                Text('Ahmad Rizqi Isnain'),
-                Text('182410102053'),
-              ],
-            ),
-          ),
-        ],
+      body: Center(
+        // Membuat Button
+        child: RaisedButton(
+          // Fungsi ketika button ditekan
+          onPressed: () {
+            Navigator.push(
+              context,
+              // Mengubah context halamanPertama menjadi halamanKedua
+              MaterialPageRoute(builder: (context) => page2()),
+            );
+          },
+          // Membuat anak berupa Widget Text
+          child: Text('Tekan untuk ke halaman kedua'),
+        ),
       ),
     );
   }
