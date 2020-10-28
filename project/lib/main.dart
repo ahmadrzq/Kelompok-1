@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:myukaqa/splashscreen.dart';
 
 void main() => runApp(MaterialApp(
   theme: ThemeData(
     primaryColor: Colors.lightBlue[300],
   ),
-  home: MyApp(),
+  home: Splashscreen(),
 ));
 
 class MyApp extends StatelessWidget {
