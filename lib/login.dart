@@ -1,183 +1,148 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
-import 'package:coba5/signup.dart';
+import 'package:mobile_solo/customwidget/customtextfield.dart';
 
-class LoginScreen extends StatefulWidget {
+class Loginscreen extends StatefulWidget {
   @override
-  _LoginScreenState createState() => _LoginScreenState();
+  _LoginscreenState createState() => _LoginscreenState();
 }
 
-// widget untuk membuat textfield username
-Widget buildUsername() {
-  return Column(
-    crossAxisAlignment: CrossAxisAlignment.start,
-    children: <Widget>[
-      Text('Username',
-          style: TextStyle(
-            color: Colors.white,
-            fontSize: 20,
-            fontWeight: FontWeight.bold,
-          )),
-      SizedBox(
-        height: 10,
-      ),
-      Container(
-          alignment: Alignment.centerLeft,
-          decoration: BoxDecoration(
-            border: Border.all(color: Colors.white),
-            borderRadius: BorderRadius.circular(10),
-          ),
-          height: 70,
-          child: TextField(
-            keyboardType: TextInputType.text,
-            style: TextStyle(color: Colors.white),
-            decoration: InputDecoration(
-                border: InputBorder.none,
-                contentPadding: EdgeInsets.only(left: 20),
-                hintText: 'Username',
-                hintStyle: TextStyle(color: Colors.white24)),
-          ))
-    ],
-  );
-}
-
-// widget untuk membuat textfield password
-Widget buildPassword() {
-  return Column(
-    crossAxisAlignment: CrossAxisAlignment.start,
-    children: <Widget>[
-      Text('Password',
-          style: TextStyle(
-            color: Colors.white,
-            fontSize: 20,
-            fontWeight: FontWeight.bold,
-          )),
-      SizedBox(height: 10),
-      Container(
-          alignment: Alignment.centerLeft,
-          decoration: BoxDecoration(
-            border: Border.all(color: Colors.white),
-            borderRadius: BorderRadius.circular(10),
-          ),
-          height: 70,
-          child: TextField(
-            obscureText: true,
-            style: TextStyle(color: Colors.white),
-            decoration: InputDecoration(
-                border: InputBorder.none,
-                contentPadding: EdgeInsets.only(left: 20),
-                hintText: 'Password',
-                hintStyle: TextStyle(color: Colors.white24)),
-          ))
-    ],
-  );
-}
-
-// widget untuk membuat tombol lupa password
-Widget buildForgotPassBtn() {
-  return Container(
-    alignment: Alignment.centerRight,
-    child: FlatButton(
-      onPressed: () => print("Forgot Password Pressed"),
-      padding: EdgeInsets.only(right: 0),
-      child: Text('Forgot Password?',
-          style: TextStyle(
-            color: Colors.white,
-            fontWeight: FontWeight.bold,
-          )),
-    ),
-  );
-}
-
-// widget untuk membuat tombol sign up
-Widget buildSignUpBtn() {
-  return GestureDetector(
-    child: RichText(
-      text: TextSpan(children: [
-        TextSpan(
-            text: 'New User? ',
-            style: TextStyle(
-                color: Colors.white,
-                fontSize: 18,
-                fontWeight: FontWeight.w500)),
-        TextSpan(
-            text: 'SIGN UP',
-            style: TextStyle(
-              color: Color.fromRGBO(139, 30, 140, 1),
-              fontSize: 18,
-              fontWeight: FontWeight.bold,
-            )),
-      ]),
-    ),
-  );
-}
-
-class _LoginScreenState extends State<LoginScreen> {
+class _LoginscreenState extends State<Loginscreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: AnnotatedRegion<SystemUiOverlayStyle>(
-        value: SystemUiOverlayStyle.light,
-        child: GestureDetector(
-            child: Stack(children: <Widget>[
-          Container(
-            height: double.infinity,
-            width: double.infinity,
-            decoration: BoxDecoration(color: Color.fromRGBO(12, 26, 70, 1)),
-            child: SingleChildScrollView(
-                physics: AlwaysScrollableScrollPhysics(),
-                padding: EdgeInsets.symmetric(
-                  horizontal: 40,
-                  vertical: 120,
-                ),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: <Widget>[
-                    // Image.asset(
-                    //   'images/ifc.jpg',
-                    // ),
-                    SizedBox(height: 60),
-                    buildUsername(),
-                    SizedBox(height: 20),
-                    buildPassword(),
-                    buildForgotPassBtn(),
-                    Container(
-                      padding: EdgeInsets.symmetric(vertical: 20),
-                      width: double.infinity,
-                      child: RaisedButton(
-                        elevation: 5,
-                        onPressed: () {
-                          // Navigator.push(
-                          //     context,
-                          //     MaterialPageRoute(
-                          //         builder: (content) => HomeScreen()));
-                        },
-                        padding: EdgeInsets.all(25),
-                        shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(15)),
-                        color: Color.fromRGBO(158, 60, 255, 1),
-                        child: Text('LOGIN',
-                            style: TextStyle(
-                                color: Colors.white,
-                                fontSize: 18,
-                                fontWeight: FontWeight.bold)),
+      resizeToAvoidBottomInset: false,
+      body: Container(
+        decoration: BoxDecoration(
+          image: DecorationImage(
+              image: AssetImage('images/1.png'), fit: BoxFit.cover),
+          gradient: LinearGradient(
+              colors: [Colors.blue[400], Colors.blue],
+              begin: Alignment.bottomCenter,
+              end: Alignment.topCenter),
+        ),
+        child: Center(
+          child: Column(
+            children: <Widget>[
+              SizedBox(
+                height: 180,
+              ),
+              Row(
+                children: <Widget>[
+                  SizedBox(
+                    width: 40,
+                  ),
+                  Text(
+                    'Welcome Back',
+                    style: TextStyle(
+                        color: Colors.white,
+                        fontWeight: FontWeight.bold,
+                        fontSize: 35),
+                  ),
+                ],
+              ),
+              SizedBox(
+                height: 20,
+              ),
+              Row(
+                children: <Widget>[
+                  SizedBox(
+                    width: 40,
+                  ),
+                  Text(
+                    'Sign in with your account',
+                    style: TextStyle(color: Colors.white, fontSize: 16),
+                  )
+                ],
+              ),
+              SizedBox(
+                height: 65,
+              ),
+              CustomTextField(
+                issecured: false,
+                hint: '    Email/Phone',
+              ),
+              SizedBox(
+                height: 20,
+              ),
+              CustomTextField(
+                hint: '   Password',
+                issecured: true,
+              ),
+              SizedBox(
+                height: 20,
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: <Widget>[
+                  GestureDetector(
+                    onTap: () {},
+                    child: Container(
+                      child: Text(
+                        'Forgot Password?',
+                        style: TextStyle(
+                            color: Colors.white, fontWeight: FontWeight.w700),
                       ),
                     ),
-                    SizedBox(height: 60),
-                    GestureDetector(
-                      onTap: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => SignUpScreen()),
-                        );
+                  ),
+                  SizedBox(
+                    width: 40,
+                  )
+                ],
+              ),
+              SizedBox(
+                height: 20,
+              ),
+              Padding(
+                padding: const EdgeInsets.only(left: 25, right: 25),
+                child: ButtonTheme(
+                    buttonColor: Colors.white,
+                    minWidth: MediaQuery.of(context).size.width,
+                    height: 55,
+                    child: RaisedButton(
+                      onPressed: () {
+                        Navigator.pushNamed(context, '/');
                       },
-                      child: buildSignUpBtn(),
-                    )
-                  ],
-                )),
-          )
-        ])),
+                      child: Text(
+                        'Log in',
+                        style: TextStyle(color: Colors.grey, fontSize: 22),
+                      ),
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(25)),
+                    )),
+              ),
+              SizedBox(
+                height: 20,
+              ),
+              SizedBox(
+                height: 25,
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: <Widget>[
+                  Text(
+                    "Don't Have an Accout ?",
+                    style: TextStyle(color: Colors.white),
+                  ),
+                  SizedBox(
+                    width: 10,
+                  ),
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.pushNamed(context, '/signup');
+                    },
+                    child: Text(
+                      'Sign up',
+                      style: TextStyle(
+                          decoration: TextDecoration.underline,
+                          fontWeight: FontWeight.w500,
+                          color: Colors.white),
+                    ),
+                  )
+                ],
+              )
+            ],
+          ),
+        ),
       ),
     );
   }

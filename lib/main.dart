@@ -1,16 +1,20 @@
 import 'package:flutter/material.dart';
-import 'login.dart';
+import 'package:mobile_solo/index.dart';
+import 'package:mobile_solo/profile.dart';
+import 'package:mobile_solo/login.dart';
+import 'package:mobile_solo/signup.dart';
 
-void main() {
-  runApp(MyApp());
-}
-
-class MyApp extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: LoginScreen(),
-    );
-  }
-}
+void main() => runApp(
+      MaterialApp(
+        title: 'Solo APP',
+        theme: ThemeData(fontFamily: 'Proxima Nova'),
+        debugShowCheckedModeBanner: false,
+        initialRoute: '/login',
+        routes: {
+          '/': (context) => HomeScreen(),
+          '/profile': (context) => ProfilePage(),
+          '/login': (context) => Loginscreen(),
+          '/signup': (context) => SignUpScreen()
+        },
+      ),
+    ); // Material App
