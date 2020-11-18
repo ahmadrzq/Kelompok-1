@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatefulWidget {
+    String nama; 
+    String password;
+
+    HomeScreen({Key key, @required this.nama, @required this.password}): super(key: key);
   @override
   _HomeScreenState createState() => _HomeScreenState();
 }
@@ -11,6 +15,8 @@ class _HomeScreenState extends State<HomeScreen> {
     "Buka Lowongan",
     "Artikel",
   ];
+
+
 
   @override
   Widget build(BuildContext context) {
