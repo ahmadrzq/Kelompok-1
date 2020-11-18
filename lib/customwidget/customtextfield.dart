@@ -10,7 +10,7 @@ class CustomTextField extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
         padding: const EdgeInsets.only(left: 25, right: 25),
-        child: TextField(
+        child: TextFormField(
           obscureText: issecured,
           cursorColor: Colors.white,
           style: TextStyle(color: Colors.white),
