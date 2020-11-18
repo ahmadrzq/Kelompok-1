@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:loginui/customwidget/customtextfield.dart';
 import 'package:loginui/signupscren.dart';
 
+
 class Loginscreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -108,28 +109,6 @@ class Loginscreen extends StatelessWidget {
               ),
               SizedBox(
                 height: 20,
-              ),
-              Center(
-                child: Text(
-                  'OR',
-                  style: TextStyle(color: Colors.white),
-                ),
-              ),
-              SizedBox(
-                height: 20,
-              ),
-              Container(
-                height: 60,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: <Widget>[
-                    Image(image: AssetImage('images/fb.png')),
-                    SizedBox(
-                      width: 20,
-                    ),
-                    Image(image: AssetImage('images/google.png'))
-                  ],
-                ),
               ),
               SizedBox(
                 height: 25,
