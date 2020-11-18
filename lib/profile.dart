@@ -87,7 +87,7 @@ class ProfilePage extends StatelessWidget {
               child: RaisedButton(
                 textColor: Colors.white,
                 onPressed: () {
-                  Navigator.pushNamed(context, '/login2');
+                  Navigator.pushNamed(context, '/login');
                 },
                 child: Text('LOG OUT'),
                 color: Color(0xff111111),
