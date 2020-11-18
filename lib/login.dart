@@ -32,7 +32,7 @@ class _LoginscreenState extends State<Loginscreen> {
                     width: 40,
                   ),
                   Text(
-                    'Welcome Back',
+                    'Welcome To Work.in',
                     style: TextStyle(
                         color: Colors.white,
                         fontWeight: FontWeight.bold,
@@ -49,7 +49,7 @@ class _LoginscreenState extends State<Loginscreen> {
                     width: 40,
                   ),
                   Text(
-                    'Sign in with your account',
+                    'Silahkan Log in dengan akun anda',
                     style: TextStyle(color: Colors.white, fontSize: 16),
                   )
                 ],
@@ -78,7 +78,7 @@ class _LoginscreenState extends State<Loginscreen> {
                     onTap: () {},
                     child: Container(
                       child: Text(
-                        'Forgot Password?',
+                        'Lupa Password?',
                         style: TextStyle(
                             color: Colors.white, fontWeight: FontWeight.w700),
                       ),
