@@ -11,13 +11,15 @@ class ProfilePage extends StatelessWidget {
         title: Text('Profile'),
         flexibleSpace: Container(
           decoration: BoxDecoration(
-              gradient: LinearGradient(
-                  begin: Alignment.bottomLeft,
-                  end: Alignment.topRight,
-                  colors: <Color>[
-                Color(0xff006494),
-                Color(0xff13293d),
-              ])),
+            gradient: LinearGradient(
+              begin: Alignment.bottomLeft,
+              end: Alignment.topRight,
+              colors: <Color>[
+                Colors.blue[400],
+                Colors.blue,
+              ],
+            ),
+          ),
         ),
       ),
       body: Padding(

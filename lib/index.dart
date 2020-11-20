@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatefulWidget {
-    String nama; 
-    String password;
+  String nama;
+  String password;
 
-    HomeScreen({Key key, @required this.nama, @required this.password}): super(key: key);
+  HomeScreen({Key key, @required this.nama, @required this.password})
+      : super(key: key);
   @override
   _HomeScreenState createState() => _HomeScreenState();
 }
@@ -15,8 +16,6 @@ class _HomeScreenState extends State<HomeScreen> {
     "Buka Lowongan",
     "Artikel",
   ];
-
-
 
   @override
   Widget build(BuildContext context) {
@@ -96,13 +95,15 @@ class _HomeScreenState extends State<HomeScreen> {
         title: Text('INDEX PAGE'),
         flexibleSpace: Container(
           decoration: BoxDecoration(
-              gradient: LinearGradient(
-                  begin: Alignment.topLeft,
-                  end: Alignment.bottomRight,
-                  colors: <Color>[
-                Color(0xff13293d),
-                Color(0xff006494),
-              ])),
+            gradient: LinearGradient(
+              begin: Alignment.topLeft,
+              end: Alignment.bottomRight,
+              colors: <Color>[
+                Colors.blue[400],
+                Colors.blue,
+              ],
+            ),
+          ),
         ),
         elevation: 0,
         actions: <Widget>[
