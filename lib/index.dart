@@ -44,7 +44,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     height: 10.0,
                   ),
                   Text(
-                    'SOLO_APPS',
+                    'WORK.IN',
                     style: TextStyle(
                       fontSize: 30.0,
                       fontWeight: FontWeight.bold,
@@ -56,21 +56,21 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
             ListTile(
               title: Text(
-                'Item 1',
+                'Cari Kerja',
                 style: TextStyle(fontSize: 20.0),
               ),
               onTap: () {},
             ),
             ListTile(
               title: Text(
-                'Item 2',
+                'Buat Lowongan Kerja',
                 style: TextStyle(fontSize: 20.0),
               ),
               onTap: () {},
             ),
             ListTile(
               title: Text(
-                'Item 3',
+                'Artikel Pekerjaan',
                 style: TextStyle(fontSize: 20.0),
               ),
               onTap: () {},
@@ -82,7 +82,7 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
             ListTile(
               title: Text(
-                'About',
+                'Tentang Kami',
                 style: TextStyle(fontSize: 20.0),
               ),
               onTap: () {},
@@ -92,7 +92,7 @@ class _HomeScreenState extends State<HomeScreen> {
       ),
       appBar: AppBar(
         centerTitle: true,
-        title: Text('INDEX PAGE'),
+        title: Text('Halaman Utama'),
         flexibleSpace: Container(
           decoration: BoxDecoration(
             gradient: LinearGradient(
