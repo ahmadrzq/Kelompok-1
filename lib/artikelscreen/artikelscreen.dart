@@ -1,20 +1,10 @@
 import 'package:flutter/material.dart';
-
-class ArtikelScreen extends StatelessWidget {
+class ArtikelScreen extends StatefulWidget {
   @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      home: indexScreen(),
-    );
-  }
+  _ArtikelScreenState createState() => _ArtikelScreenState();
 }
 
-class indexScreen extends StatefulWidget {
-  @override
-  _indexScreenState createState() => _indexScreenState();
-}
-
-class _indexScreenState extends State<indexScreen> {
+class _ArtikelScreenState extends State<ArtikelScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -25,7 +15,7 @@ class _indexScreenState extends State<indexScreen> {
           children: <Widget>[
             DrawerHeader(
               decoration: BoxDecoration(
-                color: Color(0xff006494),
+                color: Colors.blue,
               ),
               child: Column(
                 children: <Widget>[
@@ -100,55 +90,27 @@ class _indexScreenState extends State<indexScreen> {
               // bikin 2 container saling tumpuk ==============================================================
               children: <Widget>[
                 Container(
-                  // height: 100,
+                  height: 100,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.only(
-                        bottomLeft: Radius.circular(10),
-                        bottomRight: Radius.circular(10)),
+                        bottomLeft: Radius.circular(20),
+                        bottomRight: Radius.circular(20)),
                     color: Colors.blue,
                   ),
-                  child: FittedBox(
-                    child: Image.asset('images/lfc.jpg'),
-                    fit: BoxFit.fill,
-                  )
                 ),
-                Container(
-                  height: 50,
-                  alignment: Alignment.center,
-                  margin: EdgeInsets.only(top: 100),
-                  decoration: BoxDecoration(),
+                Padding(
+                  padding: const EdgeInsets.all(10.0),
                   child: Container(
-                    width: 300,
-                    color: Colors.grey[300],
                     child: Center(
                       child: Text(
-                        'Artikel Tentang Pekerjaan',
+                        'Dapatkan Atikel Pekerjaan terkini',
                         style: TextStyle(
-                          fontSize: 17,
-                          fontWeight: FontWeight.bold,
-                        ),
+                          color: Colors.white,
+                          fontSize: 21,
+                          fontWeight: FontWeight.bold
+                        ) ,
                       ),
                     ),
-                  ),
-                ),
-              ],
-            ),
-            Row(
-              //membuat 2 tulisan(artikel dan semua) ==============================================================
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: <Widget>[
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Text(
-                    'Artikel',
-                    style: TextStyle(fontSize: 17, fontWeight: FontWeight.bold),
-                  ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Text(
-                    'Semua',
-                    style: TextStyle(fontSize: 17, fontWeight: FontWeight.bold),
                   ),
                 ),
               ],
@@ -177,7 +139,9 @@ class _indexScreenState extends State<indexScreen> {
                       children: <Widget>[
                         FlatButton(
                           textColor: const Color.fromRGBO(2, 120, 174, 1),
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.pushNamed(context, '/artikeldetail');
+                          },
                           child: const Text('Baca Selengkapnya'),
                         ),
                       ],
@@ -210,7 +174,9 @@ class _indexScreenState extends State<indexScreen> {
                       children: <Widget>[
                         FlatButton(
                           textColor: const Color.fromRGBO(2, 120, 174, 1),
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.pushNamed(context, '/artikeldetail');
+                          },
                           child: const Text('Baca Selengkapnya'),
                         ),
                       ],
@@ -243,7 +209,9 @@ class _indexScreenState extends State<indexScreen> {
                       children: <Widget>[
                         FlatButton(
                           textColor: const Color.fromRGBO(2, 120, 174, 1),
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.pushNamed(context, '/artikeldetail');
+                          },
                           child: const Text('Baca Selengkapnya'),
                         ),
                       ],
