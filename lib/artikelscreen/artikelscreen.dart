@@ -21,7 +21,6 @@ class _indexScreenState extends State<indexScreen> {
       backgroundColor: Colors.grey[300],
       drawer: Drawer(
         child: ListView(
-          // Important: set padding to zero on listview
           padding: EdgeInsets.zero,
           children: <Widget>[
             DrawerHeader(
@@ -97,21 +96,27 @@ class _indexScreenState extends State<indexScreen> {
       body: SingleChildScrollView(
         child: Column(
           children: <Widget>[
-            Stack( // bikin 2 container saling tumpuk
+            Stack(
+              // bikin 2 container saling tumpuk ==============================================================
               children: <Widget>[
                 Container(
-                  height: 100,
+                  // height: 100,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.only(
                         bottomLeft: Radius.circular(10),
                         bottomRight: Radius.circular(10)),
                     color: Colors.blue,
                   ),
+                  child: FittedBox(
+                    child: Image.asset('images/lfc.jpg'),
+                    fit: BoxFit.fill,
+                  )
                 ),
                 Container(
                   height: 50,
                   alignment: Alignment.center,
-                  margin: EdgeInsets.only(top: 70),
+                  margin: EdgeInsets.only(top: 100),
+                  decoration: BoxDecoration(),
                   child: Container(
                     width: 300,
                     color: Colors.grey[300],
@@ -128,7 +133,8 @@ class _indexScreenState extends State<indexScreen> {
                 ),
               ],
             ),
-            Row( //membuat 2 tulisan(artikel dan semua)
+            Row(
+              //membuat 2 tulisan(artikel dan semua) ==============================================================
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: <Widget>[
                 Padding(
@@ -147,39 +153,8 @@ class _indexScreenState extends State<indexScreen> {
                 ),
               ],
             ),
-            Padding( //card 1 dengan padding
-              padding: const EdgeInsets.all(7),
-              child: Card(
-                clipBehavior: Clip.antiAlias,
-                child: Column(
-                  children: <Widget>[
-                    ListTile(
-                      leading: Icon(Icons.work),
-                      title: const Text('5 Cara agar sukses'),
-                      subtitle: Text('ini dia caranya'),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.all(14),
-                      child: Text(
-                        'lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum ',
-                        style: TextStyle(color: Colors.black.withOpacity(0.6)),
-                      ),
-                    ),
-                    ButtonBar(
-                      alignment: MainAxisAlignment.start,
-                      children: <Widget>[
-                        FlatButton(
-                          textColor: const Color.fromRGBO(2, 120, 174, 1),
-                          onPressed: () {},
-                          child: const Text('Baca Selengkapnya'),
-                        ),
-                      ],
-                    ),
-                  ],
-                ),
-              ),
-            ),
-            Padding( //card 2 dengan padding
+            Padding(
+              //card 1 dengan padding ==============================================================
               padding: const EdgeInsets.all(7),
               child: Card(
                 clipBehavior: Clip.antiAlias,
@@ -212,6 +187,40 @@ class _indexScreenState extends State<indexScreen> {
               ),
             ),
             Padding(
+              //card 2 dengan padding ==============================================================
+              padding: const EdgeInsets.all(7),
+              child: Card(
+                clipBehavior: Clip.antiAlias,
+                child: Column(
+                  children: <Widget>[
+                    ListTile(
+                      leading: Icon(Icons.work),
+                      title: const Text('5 Cara agar sukses'),
+                      subtitle: Text('ini dia caranya'),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(14),
+                      child: Text(
+                        'lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum ',
+                        style: TextStyle(color: Colors.black.withOpacity(0.6)),
+                      ),
+                    ),
+                    ButtonBar(
+                      alignment: MainAxisAlignment.start,
+                      children: <Widget>[
+                        FlatButton(
+                          textColor: const Color.fromRGBO(2, 120, 174, 1),
+                          onPressed: () {},
+                          child: const Text('Baca Selengkapnya'),
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+              ),
+            ),
+            Padding(
+              //card 3 dengan padding ==============================================================
               padding: const EdgeInsets.all(7),
               child: Card(
                 clipBehavior: Clip.antiAlias,
