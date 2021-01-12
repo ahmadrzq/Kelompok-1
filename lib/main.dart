@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mobile_solo/artikelscreen/artikelscreen.dart';
 import 'package:mobile_solo/index.dart';
 import 'package:mobile_solo/profile.dart';
 import 'package:mobile_solo/login.dart';
@@ -14,7 +15,9 @@ void main() => runApp(
           '/': (context) => HomeScreen(),
           '/profile': (context) => ProfilePage(),
           '/login': (context) => Loginscreen(),
-          '/signup': (context) => SignUpScreen()
+          '/signup': (context) => SignUpScreen(),
+          '/artikel': (context) => ArtikelScreen()
+          // '/artikel/detail': (context) => ArtikelScreen(),
         },
       ),
     ); // Material App

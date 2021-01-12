@@ -73,7 +73,9 @@ class _HomeScreenState extends State<HomeScreen> {
                 'Artikel Pekerjaan',
                 style: TextStyle(fontSize: 20.0),
               ),
-              onTap: () {},
+              onTap: () {
+                Navigator.pushNamed(context, '/artikel');
+              },
             ),
             Divider(
               color: Colors.grey,
