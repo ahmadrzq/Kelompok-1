@@ -33,6 +33,7 @@ class CustomDrawer extends StatelessWidget {
               if (ModalRoute.of(context).settings.name == '/cariKerja') {
                 Navigator.pop(context);
               } else {
+                Navigator.pop(context);
                 Navigator.pushNamed(context, '/cariKerja');
               }
             },
@@ -47,6 +48,7 @@ class CustomDrawer extends StatelessWidget {
                   '/mainlowongankerja') {
                 Navigator.pop(context);
               } else {
+                Navigator.pop(context);
                 Navigator.pushNamed(context, '/mainlowongankerja');
               }
             },
@@ -60,6 +62,7 @@ class CustomDrawer extends StatelessWidget {
               if (ModalRoute.of(context).settings.name == '/artikel') {
                 Navigator.pop(context);
               } else {
+                Navigator.pop(context);
                 Navigator.pushNamed(context, '/artikel');
               }
             },
@@ -75,6 +78,7 @@ class CustomDrawer extends StatelessWidget {
               style: TextStyle(fontSize: 20.0),
             ),
             onTap: () {
+              Navigator.pop(context);
               Navigator.pushNamed(context, '/tentangkami');
             },
           ),
