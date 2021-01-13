@@ -91,7 +91,9 @@ class _HomeScreenState extends State<HomeScreen> {
                 'Tentang Kami',
                 style: TextStyle(fontSize: 20.0),
               ),
-              onTap: () {},
+              onTap: () {
+                Navigator.pushNamed(context, '/tentangkami');
+              },
             ),
           ],
         ),
