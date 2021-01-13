@@ -7,6 +7,7 @@ import 'package:mobile_solo/login.dart';
 import 'package:mobile_solo/signup.dart';
 import 'package:mobile_solo/cariKerja.dart';
 import 'package:mobile_solo/detailKerja/1.dart';
+import 'package:mobile_solo/lowonganKerja/insert.dart';
 import 'package:mobile_solo/lowonganKerja/index.dart';
 
 void main() => runApp(
@@ -24,7 +25,8 @@ void main() => runApp(
           '/artikeldetail': (context) => ArtikelDetailScreen(),
           '/cariKerja': (context) => cariKerjaScreen(),
           '/detail1': (context) => detail1Screen(),
-          '/lowongankerja': (context) => lowonganKerja(),
+          '/mainlowongankerja': (context) => mainLowonganKerja(),
+          '/insertlowongankerja': (context) => lowonganKerja(),
         },
       ),
     ); // Material App
