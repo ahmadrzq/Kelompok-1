@@ -5,6 +5,8 @@ import 'package:mobile_solo/index.dart';
 import 'package:mobile_solo/profile.dart';
 import 'package:mobile_solo/login.dart';
 import 'package:mobile_solo/signup.dart';
+import 'package:mobile_solo/cariKerja.dart';
+import 'package:mobile_solo/detailKerja/1.dart';
 
 void main() => runApp(
       MaterialApp(
@@ -19,6 +21,8 @@ void main() => runApp(
           '/signup': (context) => SignUpScreen(),
           '/artikel': (context) => ArtikelScreen(),
           '/artikeldetail': (context) => ArtikelDetailScreen(),
+          '/cariKerja': (context) => cariKerjaScreen(),
+          '/detail1': (context) => detail1Screen(),
         },
       ),
     ); // Material App

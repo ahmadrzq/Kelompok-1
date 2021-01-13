@@ -59,7 +59,9 @@ class _HomeScreenState extends State<HomeScreen> {
                 'Cari Kerja',
                 style: TextStyle(fontSize: 20.0),
               ),
-              onTap: () {},
+              onTap: () {
+                Navigator.pushNamed(context, '/cariKerja');
+              },
             ),
             ListTile(
               title: Text(
