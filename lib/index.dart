@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mobile_solo/customwidget/customdrawer.dart';
 
 class HomeScreen extends StatefulWidget {
   String nama;
@@ -21,83 +22,8 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.grey[300],
-      drawer: Drawer(
-        child: ListView(
-          // Important: set padding to zero on listview
-          padding: EdgeInsets.zero,
-          children: <Widget>[
-            DrawerHeader(
-              decoration: BoxDecoration(
-                color: Colors.blue,
-              ),
-              child: Column(
-                children: <Widget>[
-                  CircleAvatar(
-                    radius: 40.0,
-                    backgroundColor: Colors.white,
-                    child: Padding(
-                      padding: EdgeInsets.all(2.0),
-                      child: Text('Gambar'),
-                    ),
-                  ),
-                  SizedBox(
-                    height: 10.0,
-                  ),
-                  Text(
-                    'WORK.IN',
-                    style: TextStyle(
-                      fontSize: 30.0,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.white,
-                    ),
-                  ),
-                ],
-              ),
-            ),
-            ListTile(
-              title: Text(
-                'Cari Kerja',
-                style: TextStyle(fontSize: 20.0),
-              ),
-              onTap: () {
-                Navigator.pushNamed(context, '/cariKerja');
-              },
-            ),
-            ListTile(
-              title: Text(
-                'Buat Lowongan Kerja',
-                style: TextStyle(fontSize: 20.0),
-              ),
-              onTap: () {
-                Navigator.pushNamed(context, '/mainlowongankerja');
-              },
-            ),
-            ListTile(
-              title: Text(
-                'Artikel Pekerjaan',
-                style: TextStyle(fontSize: 20.0),
-              ),
-              onTap: () {
-                Navigator.pushNamed(context, '/artikel');
-              },
-            ),
-            Divider(
-              color: Colors.grey,
-              indent: 10.0,
-              endIndent: 10.0,
-            ),
-            ListTile(
-              title: Text(
-                'Tentang Kami',
-                style: TextStyle(fontSize: 20.0),
-              ),
-              onTap: () {
-                Navigator.pushNamed(context, '/tentangkami');
-              },
-            ),
-          ],
-        ),
-      ),
+      // Custom drawer
+      drawer: CustomDrawer(),
       appBar: AppBar(
         centerTitle: true,
         title: Text('Halaman Utama'),

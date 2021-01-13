@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mobile_solo/customwidget/customdrawer.dart';
 
 class cariKerjaScreen extends StatefulWidget {
   @override
@@ -11,6 +12,7 @@ class _cariKerjaScreenState extends State<cariKerjaScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        drawer: CustomDrawer(),
         appBar: AppBar(
           centerTitle: true,
           title: !Searching

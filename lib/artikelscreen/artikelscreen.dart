@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:mobile_solo/customwidget/customdrawer.dart';
+
 class ArtikelScreen extends StatefulWidget {
   @override
   _ArtikelScreenState createState() => _ArtikelScreenState();
@@ -9,76 +11,7 @@ class _ArtikelScreenState extends State<ArtikelScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.grey[300],
-      drawer: Drawer(
-        child: ListView(
-          padding: EdgeInsets.zero,
-          children: <Widget>[
-            DrawerHeader(
-              decoration: BoxDecoration(
-                color: Colors.blue,
-              ),
-              child: Column(
-                children: <Widget>[
-                  CircleAvatar(
-                    radius: 40.0,
-                    backgroundColor: Colors.white,
-                    child: Padding(
-                      padding: EdgeInsets.all(2.0),
-                      child: Text('Gambar'),
-                    ),
-                  ),
-                  SizedBox(
-                    height: 10.0,
-                  ),
-                  Text(
-                    'WORK.IN',
-                    style: TextStyle(
-                      fontSize: 30.0,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.white,
-                    ),
-                  ),
-                ],
-              ),
-            ),
-            ListTile(
-              title: Text(
-                'Cari Kerja',
-                style: TextStyle(fontSize: 20.0),
-              ),
-              onTap: () {},
-            ),
-            ListTile(
-              title: Text(
-                'Buat Lowongan Kerja',
-                style: TextStyle(fontSize: 20.0),
-              ),
-              onTap: () {},
-            ),
-            ListTile(
-              title: Text(
-                'Artikel Pekerjaan',
-                style: TextStyle(fontSize: 20.0),
-              ),
-              onTap: () {
-                Navigator.pushNamed(context, '/artikel');
-              },
-            ),
-            Divider(
-              color: Colors.grey,
-              indent: 10.0,
-              endIndent: 10.0,
-            ),
-            ListTile(
-              title: Text(
-                'Tentang Kami',
-                style: TextStyle(fontSize: 20.0),
-              ),
-              onTap: () {},
-            ),
-          ],
-        ),
-      ),
+      drawer: CustomDrawer(),
       appBar: AppBar(
         centerTitle: true,
         title: Text('Artikel'),
@@ -105,10 +38,9 @@ class _ArtikelScreenState extends State<ArtikelScreen> {
                       child: Text(
                         'Dapatkan Atikel Pekerjaan terkini',
                         style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 21,
-                          fontWeight: FontWeight.bold
-                        ) ,
+                            color: Colors.white,
+                            fontSize: 21,
+                            fontWeight: FontWeight.bold),
                       ),
                     ),
                   ),
