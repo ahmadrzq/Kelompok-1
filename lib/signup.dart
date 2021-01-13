@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:mobile_solo/customwidget/customtext.dart';
 import 'package:mobile_solo/customwidget/customtextfield.dart';
 
 class SignUpScreen extends StatelessWidget {
