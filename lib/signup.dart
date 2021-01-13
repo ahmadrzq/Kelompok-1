@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mobile_solo/customwidget/customtext.dart';
 import 'package:mobile_solo/customwidget/customtextfield.dart';
 
 class SignUpScreen extends StatelessWidget {
@@ -7,6 +8,7 @@ class SignUpScreen extends StatelessWidget {
     return Scaffold(
       resizeToAvoidBottomInset: false,
       body: Container(
+        height: double.infinity,
         decoration: BoxDecoration(
           image: DecorationImage(
               image: AssetImage('images/1.png'), fit: BoxFit.cover),
@@ -41,31 +43,31 @@ class SignUpScreen extends StatelessWidget {
                   ],
                 ),
                 SizedBox(
-                  height: 110,
+                  height: 75,
                 ),
                 CustomTextField(
-                  hint: '    enter your name',
+                  hint: ' enter your name',
                   issecured: false,
                 ),
                 SizedBox(
                   height: 15,
                 ),
                 CustomTextField(
-                  hint: '    enter your Email',
+                  hint: ' enter your Email',
                   issecured: false,
                 ),
                 SizedBox(
                   height: 15,
                 ),
                 CustomTextField(
-                  hint: '    enter your Phone',
+                  hint: ' enter your Phone',
                   issecured: false,
                 ),
                 SizedBox(
                   height: 15,
                 ),
                 CustomTextField(
-                  hint: '    enter your Password',
+                  hint: ' enter your Password',
                   issecured: true,
                 ),
                 SizedBox(

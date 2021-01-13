@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:mobile_solo/customwidget/customtextfield.dart';
 import 'package:mobile_solo/index.dart';
 
 class Loginscreen extends StatefulWidget {
@@ -20,6 +19,8 @@ class _LoginscreenState extends State<Loginscreen> {
     return Scaffold(
       resizeToAvoidBottomInset: false,
       body: Container(
+        // Mengeset height container menjadi full
+        height: double.infinity,
         decoration: BoxDecoration(
           image: DecorationImage(
               image: AssetImage('images/1.png'), fit: BoxFit.cover),
@@ -72,81 +73,97 @@ class _LoginscreenState extends State<Loginscreen> {
                   SizedBox(
                     height: 65,
                   ),
-                  TextFormField(
-                    validator: (String value) {
-                      if (value.isEmpty) {
-                        return 'Harap Masukin Email/Phone';
-                      }
-                      return null;
-                    },
-                    cursorColor: Colors.white,
-                    style: TextStyle(color: Colors.white),
-                    maxLength: 16,
-                    maxLengthEnforced: true,
-                    controller: myUsernameController,
-                    decoration: InputDecoration(
-                      disabledBorder: OutlineInputBorder(
-                        borderSide: BorderSide(color: Colors.transparent),
-                        borderRadius: BorderRadius.circular(25),
-                      ),
-                      hintText: '  Email/Phone',
-                      hintStyle: TextStyle(
-                          fontSize: 18,
-                          letterSpacing: 1.5,
-                          color: Colors.white70,
-                          fontWeight: FontWeight.w900),
-                      filled: true,
-                      hoverColor: Colors.transparent,
-                      focusColor: Colors.transparent,
-                      fillColor: Colors.white.withOpacity(.3),
-                      border: OutlineInputBorder(
-                        borderSide: BorderSide(color: Colors.transparent),
-                        borderRadius: BorderRadius.circular(25),
-                      ),
-                      enabledBorder: OutlineInputBorder(
-                        borderSide: BorderSide(color: Colors.transparent),
-                        borderRadius: BorderRadius.circular(25),
+                  // Menggunakan container agar bisa mengedit width TextFormField
+                  Container(
+                    // Mengeset width sebesar 90%
+                    width: MediaQuery.of(context).size.width * 0.90,
+                    child: TextFormField(
+                      validator: (String value) {
+                        if (value.isEmpty) {
+                          return 'Harap Masukin Email/Phone';
+                        }
+                        return null;
+                      },
+                      cursorColor: Colors.white,
+                      style: TextStyle(color: Colors.white),
+                      maxLength: 40,
+                      maxLengthEnforced: true,
+                      controller: myUsernameController,
+                      decoration: InputDecoration(
+                        // Mengeset padding didalam text-field
+                        contentPadding:
+                            EdgeInsets.symmetric(horizontal: 30, vertical: 20),
+                        disabledBorder: OutlineInputBorder(
+                          borderSide: BorderSide(color: Colors.transparent),
+                          borderRadius: BorderRadius.circular(25),
+                        ),
+                        hintText: 'Email/Phone',
+                        hintStyle: TextStyle(
+                            fontSize: 18,
+                            letterSpacing: 1.5,
+                            color: Colors.white70,
+                            fontWeight: FontWeight.w900),
+                        filled: true,
+                        hoverColor: Colors.transparent,
+                        focusColor: Colors.transparent,
+                        fillColor: Colors.white.withOpacity(.3),
+                        border: OutlineInputBorder(
+                          borderSide: BorderSide(color: Colors.transparent),
+                          borderRadius: BorderRadius.circular(25),
+                        ),
+                        enabledBorder: OutlineInputBorder(
+                          borderSide: BorderSide(color: Colors.transparent),
+                          borderRadius: BorderRadius.circular(25),
+                        ),
                       ),
                     ),
                   ),
                   SizedBox(
                     height: 20,
                   ),
-                  TextFormField(
-                    validator: (String value) {
-                      if (value.isEmpty) {
-                        return '   Harap Masukin Password';
-                      }
-                      return null;
-                    },
-                    cursorColor: Colors.white,
-                    style: TextStyle(color: Colors.white),
-                    maxLength: 16,
-                    maxLengthEnforced: true,
-                    controller: myPasswordController,
-                    obscureText: true,
-                    decoration: InputDecoration(
-                      disabledBorder: OutlineInputBorder(
-                        borderSide: BorderSide(color: Colors.transparent),
-                        borderRadius: BorderRadius.circular(25),
-                      ),
-                      hintText: '  Password',
-                      hintStyle: TextStyle(
-                          fontSize: 18,
-                          letterSpacing: 1.5,
-                          color: Colors.white70,
-                          fontWeight: FontWeight.w900),
-                      filled: true,
-                      hoverColor: Colors.transparent,
-                      focusColor: Colors.transparent,
-                      fillColor: Colors.white.withOpacity(.3),
-                      border: OutlineInputBorder(
-                        borderSide: BorderSide(color: Colors.transparent),
-                        borderRadius: BorderRadius.circular(25),
-                      ),
-                      enabledBorder: OutlineInputBorder(
-                        borderSide: BorderSide(color: Colors.transparent),
-                        borderRadius: BorderRadius.circular(25),
+                  // Menggunakan container agar bisa mengedit width TextFormField
+                  Container(
+                    // Mengeset width sebesar 90%
+                    width: MediaQuery.of(context).size.width * 0.90,
+                    child: TextFormField(
+                      validator: (String value) {
+                        if (value.isEmpty) {
+                          return '   Harap Masukin Password';
+                        }
+                        return null;
+                      },
+                      cursorColor: Colors.white,
+                      style: TextStyle(color: Colors.white),
+                      maxLength: 30,
+                      maxLengthEnforced: true,
+                      controller: myPasswordController,
+                      obscureText: true,
+                      decoration: InputDecoration(
+                        // Mengeset padding didalam text-field
+                        contentPadding:
+                            EdgeInsets.symmetric(horizontal: 30, vertical: 20),
+                        disabledBorder: OutlineInputBorder(
+                          borderSide: BorderSide(color: Colors.transparent),
+                          borderRadius: BorderRadius.circular(25),
+                        ),
+                        hintText: ' Password',
+                        hintStyle: TextStyle(
+                            fontSize: 18,
+                            letterSpacing: 1.5,
+                            color: Colors.white70,
+                            fontWeight: FontWeight.w900),
+                        filled: true,
+                        hoverColor: Colors.transparent,
+                        focusColor: Colors.transparent,
+                        fillColor: Colors.white.withOpacity(.3),
+                        border: OutlineInputBorder(
+                          borderSide: BorderSide(color: Colors.transparent),
+                          borderRadius: BorderRadius.circular(25),
+                        ),
+                        enabledBorder: OutlineInputBorder(
+                          borderSide: BorderSide(color: Colors.transparent),
+                          borderRadius: BorderRadius.circular(25),
+                        ),
                       ),
                     ),
                   ),
