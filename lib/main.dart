@@ -7,6 +7,7 @@ import 'package:mobile_solo/login.dart';
 import 'package:mobile_solo/signup.dart';
 import 'package:mobile_solo/cariKerja.dart';
 import 'package:mobile_solo/tentang.dart';
+import 'package:mobile_solo/camera.dart';
 import 'package:mobile_solo/detailKerja/1.dart';
 import 'package:mobile_solo/lowonganKerja/insert.dart';
 import 'package:mobile_solo/lowonganKerja/index.dart';
@@ -29,6 +30,7 @@ void main() => runApp(
           '/mainlowongankerja': (context) => mainLowonganKerja(),
           '/insertlowongankerja': (context) => lowonganKerja(),
           '/tentangkami': (context) => tentangKami(),
+          '/kameraprofil': (context) => cameraScreen(),
         },
       ),
     ); // Material App

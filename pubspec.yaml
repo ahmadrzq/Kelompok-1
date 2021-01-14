@@ -23,6 +23,8 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  camera: ^0.6.4+5
+  easy_permission_validator: ^1.0.5
 
 
   # The following adds the Cupertino Icons font to your application.

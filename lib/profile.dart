@@ -28,12 +28,22 @@ class ProfilePage extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Center(
-              child: CircleAvatar(
-                backgroundColor: Colors.white,
-                radius: 75.0,
-                backgroundImage: AssetImage('images/Logo.png'),
+                child: Column(
+                  children: [
+                    CircleAvatar(
+                    backgroundColor: Colors.white,
+                    radius: 75.0,
+                    backgroundImage: AssetImage('images/Logo.png'),
+                    ),
+                    RaisedButton(
+                textColor: Colors.white,
+                onPressed: () {
+                  Navigator.pushNamed(context, '/kameraprofil');
+                },
+                child: Text('Tambahkan Foto Profil'),
+                color: Color(0xff111111),
               ),
-            ),
+            ])),
             Divider(
               height: 50.0,
               color: Colors.white,
