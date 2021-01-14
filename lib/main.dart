@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:mobile_solo/artikelscreen/artikeldetailscreen.dart';
 import 'package:mobile_solo/artikelscreen/artikelscreen.dart';
 import 'package:mobile_solo/googlemaps/googlemaps.dart';
+import 'package:mobile_solo/httprequest/users.dart';
 import 'package:mobile_solo/index.dart';
 import 'package:mobile_solo/profile.dart';
 import 'package:mobile_solo/login.dart';
@@ -31,6 +32,7 @@ void main() => runApp(
           '/mainlowongankerja': (context) => mainLowonganKerja(),
           '/insertlowongankerja': (context) => lowonganKerja(),
           '/tentangkami': (context) => tentangKami(),
+          '/httprequest': (context) => httpRequest(),
         },
       ),
     ); // Material App

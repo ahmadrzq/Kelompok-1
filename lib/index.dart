@@ -12,6 +12,8 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
+
+
   List job = [
     "Cari Kerja",
     "Buka Lowongan",
@@ -53,145 +55,167 @@ class _HomeScreenState extends State<HomeScreen> {
           )
         ],
       ),
-      body: Column(
-        children: <Widget>[
-          Stack(
-            children: <Widget>[
-              Container(
-                height: 100,
-                decoration: BoxDecoration(
-                    color: Colors.blue[400],
-                    boxShadow: [
-                      BoxShadow(
-                          color: Colors.grey.withOpacity(0.5),
-                          spreadRadius: 2,
-                          blurRadius: 7,
-                          offset: Offset(0, 3))
-                    ],
-                    borderRadius:
-                        BorderRadius.only(bottomRight: Radius.circular(40))),
+      body: SingleChildScrollView(
+        child: Column(
+          children: <Widget>[
+            Stack(
+              children: <Widget>[
+                Container(
+                  height: 100,
+                  decoration: BoxDecoration(
+                      color: Colors.blue[400],
+                      boxShadow: [
+                        BoxShadow(
+                            color: Colors.grey.withOpacity(0.5),
+                            spreadRadius: 2,
+                            blurRadius: 7,
+                            offset: Offset(0, 3))
+                      ],
+                      borderRadius:
+                          BorderRadius.only(bottomRight: Radius.circular(40))),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Center(
+                    child: Text(
+                      'Selamat Datang di Work.In',
+                      style: TextStyle(
+                          fontSize: 27,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.white,
+                          fontFamily: 'Proxima Nova'),
+                    ),
+                  ),
+                ),
+              ],
+            ),
+            SizedBox(
+              height: 10,
+            ),
+            Card(
+              child: InkWell(
+                splashColor: Colors.blue.withAlpha(10),
+                onTap: () {
+                  Navigator.pushNamed(context, '/cariKerja');
+                },
+                child: Container(
+                  width: 330,
+                  height: 100,
+                  decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.all(Radius.circular(10))),
+                  child: Center(
+                    child: ListTile(
+                      leading: Padding(
+                        padding: const EdgeInsets.all(3.0),
+                        child: Image.asset('images/job.png'),
+                      ),
+                      title: Text(
+                        'Cari Pekerjaan',
+                        style: TextStyle(
+                            fontSize: 21,
+                            color: Colors.blue,
+                            fontWeight: FontWeight.bold),
+                      ),
+                      subtitle: Text(
+                          'Disini Anda bisa mencari pekerjaan sesuai dengan bidang Anda'),
+                    ),
+                  ),
+                ),
               ),
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Center(
+            ),
+            SizedBox(
+              height: 10,
+            ),
+            Card(
+              child: InkWell(
+                splashColor: Colors.blue.withAlpha(10),
+                onTap: () {
+                  Navigator.pushNamed(context, '/mainlowongankerja');
+                },
+                child: Container(
+                  width: 330,
+                  height: 100,
+                  decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.all(Radius.circular(10))),
+                  child: Center(
+                    child: ListTile(
+                      leading: Padding(
+                        padding: const EdgeInsets.all(3.0),
+                        child: Image.asset('images/job.png'),
+                      ),
+                      title: Text(
+                        'Buat Lowongan',
+                        style: TextStyle(
+                            fontSize: 21,
+                            color: Colors.blue,
+                            fontWeight: FontWeight.bold),
+                      ),
+                      subtitle:
+                          Text('Anda juga dapat membuat lowongan pekerjaan'),
+                    ),
+                  ),
+                ),
+              ),
+            ),
+            SizedBox(
+              height: 10,
+            ),
+            Card(
+              child: InkWell(
+                splashColor: Colors.blue.withAlpha(10),
+                onTap: () {
+                  Navigator.pushNamed(context, '/artikel');
+                },
+                child: Container(
+                  width: 330,
+                  height: 100,
+                  decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.all(Radius.circular(10))),
+                  child: Center(
+                    child: ListTile(
+                      leading: Padding(
+                        padding: const EdgeInsets.all(3.0),
+                        child: Image.asset('images/job.png'),
+                      ),
+                      title: Text(
+                        'Artikel Pekerjaan',
+                        style: TextStyle(
+                            fontSize: 21,
+                            color: Colors.blue,
+                            fontWeight: FontWeight.bold),
+                      ),
+                      subtitle: Text(
+                          'Anda bisa mendaptkan info terkini tentang pekerjaan'),
+                    ),
+                  ),
+                ),
+              ),
+            ),
+            SizedBox(
+              height: 8,
+            ),
+            Padding(
+              padding: const EdgeInsets.only(left: 14, right: 14),
+              child: SizedBox(
+                width: double.infinity,
+                child: RaisedButton(
+                  color: Colors.blue[400],
                   child: Text(
-                    'Selamat Datang di Work.In',
-                    style: TextStyle(
-                        fontSize: 27,
-                        fontWeight: FontWeight.bold,
-                        color: Colors.white,
-                        fontFamily: 'Proxima Nova'),
+                    'Pengguna Aplikasi Kami',
+                    style: TextStyle(color: Colors.white),
                   ),
-                ),
-              ),
-            ],
-          ),
-          SizedBox(
-            height: 10,
-          ),
-          Card(
-            child: InkWell(
-              splashColor: Colors.blue.withAlpha(10),
-              onTap: () {
-                Navigator.pushNamed(context, '/cariKerja');
-              },
-              child: Container(
-                width: 330,
-                height: 100,
-                decoration: BoxDecoration(
-                    color: Colors.white,
-                    borderRadius: BorderRadius.all(Radius.circular(10))),
-                child: Center(
-                  child: ListTile(
-                    leading: Padding(
-                      padding: const EdgeInsets.all(3.0),
-                      child: Image.asset('images/job.png'),
-                    ),
-                    title: Text(
-                      'Cari Pekerjaan',
-                      style: TextStyle(
-                          fontSize: 21,
-                          color: Colors.blue,
-                          fontWeight: FontWeight.bold),
-                    ),
-                    subtitle: Text(
-                        'Disini Anda bisa mencari pekerjaan sesuai dengan bidang Anda'),
-                  ),
+                  onPressed: () {
+                    Navigator.pushNamed(context, '/httprequest');
+                  },
                 ),
               ),
             ),
-          ),
-          SizedBox(
-            height: 10,
-          ),
-          Card(
-            child: InkWell(
-              splashColor: Colors.blue.withAlpha(10),
-              onTap: () {
-                Navigator.pushNamed(context, '/mainlowongankerja');
-              },
-              child: Container(
-                width: 330,
-                height: 100,
-                decoration: BoxDecoration(
-                    color: Colors.white,
-                    borderRadius: BorderRadius.all(Radius.circular(10))),
-                child: Center(
-                  child: ListTile(
-                    leading: Padding(
-                      padding: const EdgeInsets.all(3.0),
-                      child: Image.asset('images/job.png'),
-                    ),
-                    title: Text(
-                      'Buat Lowongan',
-                      style: TextStyle(
-                          fontSize: 21,
-                          color: Colors.blue,
-                          fontWeight: FontWeight.bold),
-                    ),
-                    subtitle:
-                        Text('Anda juga dapat membuat lowongan pekerjaan'),
-                  ),
-                ),
-              ),
-            ),
-          ),
-          SizedBox(
-            height: 10,
-          ),
-          Card(
-            child: InkWell(
-              splashColor: Colors.blue.withAlpha(10),
-              onTap: () {
-                Navigator.pushNamed(context, '/artikel');
-              },
-              child: Container(
-                width: 330,
-                height: 100,
-                decoration: BoxDecoration(
-                    color: Colors.white,
-                    borderRadius: BorderRadius.all(Radius.circular(10))),
-                child: Center(
-                  child: ListTile(
-                    leading: Padding(
-                      padding: const EdgeInsets.all(3.0),
-                      child: Image.asset('images/job.png'),
-                    ),
-                    title: Text(
-                      'Artikel Pekerjaan',
-                      style: TextStyle(
-                          fontSize: 21,
-                          color: Colors.blue,
-                          fontWeight: FontWeight.bold),
-                    ),
-                    subtitle: Text(
-                        'Anda bisa mendaptkan info terkini tentang pekerjaan'),
-                  ),
-                ),
-              ),
-            ),
-          ),
-        ],
+
+          ],
+        ),
       ),
     );
   }
