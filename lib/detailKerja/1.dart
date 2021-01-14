@@ -29,9 +29,22 @@ class _detail1ScreenState extends State<detail1Screen> {
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: <Widget>[
-                          new Image.asset(
-                            'images/lfc2.jpg',
-                            height: 50,
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: <Widget>[
+                              new Image.asset(
+                                'images/lfc2.jpg',
+                                height: 50,
+                              ),
+                              IconButton(
+                                icon: Icon(Icons.location_on),
+                                color: Colors.red,
+                                iconSize: 30,
+                                onPressed: () {
+                                  Navigator.pushNamed(context, '/maps');
+                                },
+                              ),
+                            ],
                           ),
                           SizedBox(
                             height: 10,

@@ -34,6 +34,7 @@ class _ArtikelScreenState extends State<ArtikelScreen> {
                 Padding(
                   padding: const EdgeInsets.all(10.0),
                   child: Container(
+                    height: 70,
                     child: Center(
                       child: Text(
                         'Dapatkan Atikel Pekerjaan terkini',
