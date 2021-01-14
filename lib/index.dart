@@ -96,9 +96,11 @@ class _HomeScreenState extends State<HomeScreen> {
                 Navigator.pushNamed(context, '/cariKerja');
               },
               child: Container(
-                color: Colors.white,
                 width: 330,
                 height: 100,
+                decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.all(Radius.circular(10))),
                 child: Center(
                   child: ListTile(
                     leading: Padding(
@@ -129,9 +131,11 @@ class _HomeScreenState extends State<HomeScreen> {
                 Navigator.pushNamed(context, '/mainlowongankerja');
               },
               child: Container(
-                color: Colors.white,
                 width: 330,
                 height: 100,
+                decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.all(Radius.circular(10))),
                 child: Center(
                   child: ListTile(
                     leading: Padding(
@@ -145,8 +149,8 @@ class _HomeScreenState extends State<HomeScreen> {
                           color: Colors.blue,
                           fontWeight: FontWeight.bold),
                     ),
-                    subtitle: Text(
-                        'Anda juga dapat membuat lowongan pekerjaan'),
+                    subtitle:
+                        Text('Anda juga dapat membuat lowongan pekerjaan'),
                   ),
                 ),
               ),
@@ -162,9 +166,11 @@ class _HomeScreenState extends State<HomeScreen> {
                 Navigator.pushNamed(context, '/artikel');
               },
               child: Container(
-                color: Colors.white,
                 width: 330,
                 height: 100,
+                decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.all(Radius.circular(10))),
                 child: Center(
                   child: ListTile(
                     leading: Padding(
