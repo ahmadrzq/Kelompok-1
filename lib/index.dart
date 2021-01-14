@@ -53,17 +53,47 @@ class _HomeScreenState extends State<HomeScreen> {
           )
         ],
       ),
-      body: Padding(
-        padding: EdgeInsets.fromLTRB(10.0, 5.0, 10.0, 0.0),
-        child: ListView(
-            children: job.map((kerja) {
-          return Card(
-            child: ListTile(
-              leading: Icon(Icons.arrow_right),
-              title: Text(kerja),
+      body: Column(
+        children: <Widget>[
+          Stack(
+            children: <Widget>[
+              Container(
+                height: 100,
+                decoration: BoxDecoration(
+                    color: Colors.blue[400],
+                    boxShadow: [
+                      BoxShadow(
+                          color: Colors.grey.withOpacity(0.5),
+                          spreadRadius: 2,
+                          blurRadius: 7,
+                          offset: Offset(0, 3))
+                    ],
+                    borderRadius:
+                        BorderRadius.only(bottomRight: Radius.circular(40))),
+              ),
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Center(
+                  child: Text(
+                    'Selamat Datang di Work.In',
+                    style: TextStyle(
+                        fontSize: 27,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.white,
+                        fontFamily: 'Proxima Nova'),
+                  ),
+                ),
+              ),
+            ],
+          ),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Container(
+              height: 100,
+              color: Colors.blue,
             ),
-          );
-        }).toList()),
+          ),
+        ],
       ),
     );
   }
