@@ -86,11 +86,103 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
             ],
           ),
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Container(
-              height: 100,
-              color: Colors.blue,
+          SizedBox(
+            height: 10,
+          ),
+          Card(
+            child: InkWell(
+              splashColor: Colors.blue.withAlpha(10),
+              onTap: () {
+                Navigator.pushNamed(context, '/cariKerja');
+              },
+              child: Container(
+                color: Colors.white,
+                width: 330,
+                height: 100,
+                child: Center(
+                  child: ListTile(
+                    leading: Padding(
+                      padding: const EdgeInsets.all(3.0),
+                      child: Image.asset('images/job.png'),
+                    ),
+                    title: Text(
+                      'Cari Pekerjaan',
+                      style: TextStyle(
+                          fontSize: 21,
+                          color: Colors.blue,
+                          fontWeight: FontWeight.bold),
+                    ),
+                    subtitle: Text(
+                        'Disini Anda bisa mencari pekerjaan sesuai dengan bidang Anda'),
+                  ),
+                ),
+              ),
+            ),
+          ),
+          SizedBox(
+            height: 10,
+          ),
+          Card(
+            child: InkWell(
+              splashColor: Colors.blue.withAlpha(10),
+              onTap: () {
+                Navigator.pushNamed(context, '/mainlowongankerja');
+              },
+              child: Container(
+                color: Colors.white,
+                width: 330,
+                height: 100,
+                child: Center(
+                  child: ListTile(
+                    leading: Padding(
+                      padding: const EdgeInsets.all(3.0),
+                      child: Image.asset('images/job.png'),
+                    ),
+                    title: Text(
+                      'Buat Lowongan',
+                      style: TextStyle(
+                          fontSize: 21,
+                          color: Colors.blue,
+                          fontWeight: FontWeight.bold),
+                    ),
+                    subtitle: Text(
+                        'Anda juga dapat membuat lowongan pekerjaan'),
+                  ),
+                ),
+              ),
+            ),
+          ),
+          SizedBox(
+            height: 10,
+          ),
+          Card(
+            child: InkWell(
+              splashColor: Colors.blue.withAlpha(10),
+              onTap: () {
+                Navigator.pushNamed(context, '/artikel');
+              },
+              child: Container(
+                color: Colors.white,
+                width: 330,
+                height: 100,
+                child: Center(
+                  child: ListTile(
+                    leading: Padding(
+                      padding: const EdgeInsets.all(3.0),
+                      child: Image.asset('images/job.png'),
+                    ),
+                    title: Text(
+                      'Artikel Pekerjaan',
+                      style: TextStyle(
+                          fontSize: 21,
+                          color: Colors.blue,
+                          fontWeight: FontWeight.bold),
+                    ),
+                    subtitle: Text(
+                        'Anda bisa mendaptkan info terkini tentang pekerjaan'),
+                  ),
+                ),
+              ),
             ),
           ),
         ],
