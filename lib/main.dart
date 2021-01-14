@@ -33,11 +33,8 @@ void main() => runApp(
           '/mainlowongankerja': (context) => mainLowonganKerja(),
           '/insertlowongankerja': (context) => lowonganKerja(),
           '/tentangkami': (context) => tentangKami(),
-<<<<<<< HEAD
           '/kameraprofil': (context) => cameraScreen(),
-=======
           '/httprequest': (context) => httpRequest(),
->>>>>>> 44f49f59e61ead2e123227899a3521fbea606198
         },
       ),
     ); // Material App
