@@ -11,7 +11,7 @@ class ArtikelDetailScreen extends StatelessWidget {
         children: <Widget>[
           Container(
             child: Image.asset(
-              'images/lfc.jpg',
+              'images/job.png',
               fit: BoxFit.fill,
             ),
           ),
@@ -28,7 +28,7 @@ class ArtikelDetailScreen extends StatelessWidget {
             padding: const EdgeInsets.all(10),
             child: Container(
                 child: Text(
-              'Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum ',
+              'Kesuksesan adalah impian bagi tiap orang di dunia. Namun, pernahkah Anda bertanya-tanya bagaimana cara menjadi orang sukses? Untuk mencapai kesuksesan tersebut memang dibutuhkan kerja keras dan semangat pantang menyerah. Akan tetapi cara tersebut tidak cukup. Kamu pun perlu mempelajari cara menjadi orang sukses yang lain agar lebih mudah dalam mencapai apa yang dicita-citakan.',
               style:
                   TextStyle(fontSize: 17, color: Colors.black.withOpacity(0.7)),
             )),
