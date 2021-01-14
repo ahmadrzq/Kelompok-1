@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:mobile_solo/artikelscreen/artikeldetailscreen.dart';
 import 'package:mobile_solo/artikelscreen/artikelscreen.dart';
+import 'package:mobile_solo/googlemaps/googlemaps.dart';
+import 'package:mobile_solo/httprequest/users.dart';
 import 'package:mobile_solo/index.dart';
 import 'package:mobile_solo/profile.dart';
 import 'package:mobile_solo/login.dart';
@@ -27,10 +29,15 @@ void main() => runApp(
           '/artikeldetail': (context) => ArtikelDetailScreen(),
           '/cariKerja': (context) => cariKerjaScreen(),
           '/detail1': (context) => detail1Screen(),
+          '/maps': (context) => googlemaps(),
           '/mainlowongankerja': (context) => mainLowonganKerja(),
           '/insertlowongankerja': (context) => lowonganKerja(),
           '/tentangkami': (context) => tentangKami(),
+<<<<<<< HEAD
           '/kameraprofil': (context) => cameraScreen(),
+=======
+          '/httprequest': (context) => httpRequest(),
+>>>>>>> 44f49f59e61ead2e123227899a3521fbea606198
         },
       ),
     ); // Material App
